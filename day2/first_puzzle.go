@@ -15,7 +15,7 @@ func init() {
 type Problem struct {
 	minValue int
 	maxValue int
-	letter   int32
+	letter   uint8
 	text     string
 }
 
@@ -37,17 +37,17 @@ func loadFromFile(fileName string) []Problem {
 		text := scanner.Text()
 		minValue, _ := strconv.Atoi(strings.Split(valueRange, "-")[0])
 		maxValue, _ := strconv.Atoi(strings.Split(valueRange, "-")[1])
-		letter := int32(l[0])
+		letter := l[0]
 		problems = append(problems, Problem{minValue: minValue, maxValue: maxValue, letter: letter, text: text})
 
 	}
 	return problems
 }
 
-func countLetter(text string, letter int32) int {
+func countLetter(text string, letter uint8) int {
 	total := 0
-	for _, l := range text {
-		if l == letter {
+	for i := range text {
+		if text[i] == letter {
 			total += 1
 		}
 	}

@@ -9,7 +9,7 @@ func RunSecondPuzzle() int {
 	problems := loadFromFile("day2\\data1")
 
 	for _, problem := range problems {
-		exist := checkExistence(problem.text, int32(problem.minValue-1), int32(problem.maxValue-1), uint8(problem.letter))
+		exist := checkExistence(problem.text, int32(problem.minValue-1), int32(problem.maxValue-1), problem.letter)
 		if exist {
 			valid++
 		}

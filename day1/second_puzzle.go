@@ -1,9 +1,12 @@
 package day1
 
-import "fmt"
+import (
+	"advent-of-code/utils"
+	"fmt"
+)
 
 func RunSecondPuzzle() int {
-	stringValues := loadFromFile("day1\\data1")
+	stringValues := utils.LoadFromFile("day1\\data1")
 	intValues := convertToInt(stringValues)
 
 	result := 0

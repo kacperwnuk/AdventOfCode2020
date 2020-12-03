@@ -1,28 +1,13 @@
 package day1
 
 import (
-	"bufio"
+	"advent-of-code/utils"
 	"fmt"
-	"os"
 	"strconv"
 )
 
 func init() {
 	//fmt.Println(loadFromFile("day1\\data1"))
-}
-
-func loadFromFile(fileName string) []string {
-	file, err := os.Open(fileName)
-	if err != nil {
-		return nil
-	}
-
-	var lines []string
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		lines = append(lines, scanner.Text())
-	}
-	return lines
 }
 
 func convertToInt(strings []string) []int {
@@ -37,7 +22,7 @@ func convertToInt(strings []string) []int {
 var YEAR = 2020
 
 func RunFirstPuzzle() int {
-	stringValues := loadFromFile("day1\\data1")
+	stringValues := utils.LoadFromFile("day1\\data1")
 	intValues := convertToInt(stringValues)
 
 	missingValue := make(map[int]int)
