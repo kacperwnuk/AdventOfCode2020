@@ -1,7 +1,7 @@
 package main
 
 import (
-	"advent-of-code/day8"
+	"advent-of-code/day10"
 	"fmt"
 )
 
@@ -20,6 +20,10 @@ func main() {
 	//fmt.Println(day6.RunSecondPuzzle())
 	//fmt.Println(day7.RunFirstPuzzle())
 	//fmt.Println(day7.RunSecondPuzzle())
-	fmt.Println(day8.RunFirstPuzzle())
-	fmt.Println(day8.RunSecondPuzzle())
+	//fmt.Println(day8.RunFirstPuzzle())
+	//fmt.Println(day8.RunSecondPuzzle())
+	//fmt.Println(day9.RunFirstPuzzle())
+	//fmt.Println(day9.RunSecondPuzzle())
+	//fmt.Println(day10.RunFirstPuzzle())
+	fmt.Println(day10.RunSecondPuzzle())
 }
